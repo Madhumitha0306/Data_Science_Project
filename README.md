@@ -1,65 +1,74 @@
-Level 1 – Data Exploration, Descriptive & Geospatial Analysis
+Restaurant Data Analysis Project
 
- Dataset
-The dataset contains information about restaurants, including attributes such as Restaurant Name, Country Code, City, Cuisines, Aggregate Rating, and other related details.
+Overview
+This project analyzes a restaurant dataset to gain insights into customer preferences, restaurant ratings, and cuisine popularity.
+It is divided into three levels, each containing three tasks, covering data cleaning, visualization, predictive modeling, and customer preference analysis.
 
-Task 1: Data Exploration and Preprocessing
+The dataset includes features such as:
+Restaurant ID, Restaurant Name, City, Cuisines, Aggregate rating, Votes, Price range, Average Cost for two, and more.
 
-Objective:
-Explore and clean the dataset before performing analysis.
+📂 Level 1: Data Cleaning & Basic Analysis
 
-Steps Performed:
-* Loaded the dataset using Pandas.
-* Identified the number of rows and columns in the dataset.
-* Checked for missing values in each column and handled them (using mean/mode fill or by removing rows).
-* Verified and converted data types where necessary (e.g., converting ratings to numeric).
-* Analyzed the distribution of the target variable – “Aggregate Rating” to identify class imbalance.
-* Visualized the distribution using histograms and count plots with Seaborn.
+Task 1: Dataset Overview
+* Load and preview the dataset.
+* Check column names, data types, and missing values.
+* Understand the basic structure and size of the dataset.
 
-Outcome:
-* Clean and ready-to-analyze dataset.
-* Understood data quality and missing value patterns.
-* Verified the balance of the target variable.
+Task 2: Missing Values & Data Cleaning
+* Identify and handle missing values in key columns.
+* Create derived columns, e.g., Main_Cuisine from Cuisines.
+* Ensure numeric columns are correctly formatted for analysis.
 
-  Task 2: Descriptive Analysis
+Task 3: Exploratory Data Analysis (EDA)
+* Generate summary statistics of numeric and categorical features.
+* Visualize distributions of key variables using histograms, bar plots, and count plots.
+* Identify patterns and outliers for further investigation.
 
-Objective:
-Generate statistical insights and explore categorical data patterns.
+📂 Level 2: Customer Preference Analysis
 
-Steps Performed:
-* Calculated basic statistics (mean, median, standard deviation, min, max) for all numerical columns using describe().
-* Explored the distribution of categorical variables such as Country Code, City, and Cuisines.
-* Identified the top cuisines and top cities with the highest number of restaurants.
-* Created bar plots using Matplotlib and Seaborn to visualize the results.
+Task 1: Cuisine Popularity
+* Analyze the relationship between cuisine type and restaurant ratings.
+* Identify the most common cuisines in the dataset.
 
-Outcome:
+Task 2: Popular Cuisines by Votes
+* Sum votes per cuisine to identify customer favorites.
+* Visualize top cuisines based on total votes using bar charts.
 
-* Summary of numeric trends and category distributions.
-* Found the most common cuisines and restaurant locations.
-* Identified key countries and cities contributing to the dataset.
+Task 3: High-Rated Cuisines
 
-Task 3: Geospatial Analysis
+* Determine which cuisines tend to receive higher ratings.
+* Compare popularity and quality by combining votes and average rating.
+* Visualize insights with scatterplots to identify cuisines that are both popular and highly rated.
 
-Objective:
-Analyze restaurant locations geographically and explore their spatial relationship with ratings.
+📂 Level 3: Advanced Analysis & Predictive Modeling
 
-Steps Performed:
-* Verified and used the latitude and longitude columns for mapping.
-* Plotted restaurant locations on an interactive map using Folium.
-* Visualized the distribution of restaurants across different cities and countries using bar charts.
-* Checked for possible correlation between geographic coordinates and ratings using Pearson correlation.
-* Displayed scatter plots for latitude vs rating and longitude vs rating.
+Task 1: Predictive Modeling
+* Build regression models to predict the Aggregate rating of a restaurant.
+* Implement Linear Regression, Decision Tree Regressor, and Random Forest Regressor.
+* Split dataset into training and testing sets.
+* Evaluate models using RMSE, MAE, and R² score.
+* Identify important features influencing ratings.
 
-Outcome:
-* Interactive geographical visualization of restaurants.
-* Insights into which cities/countries have the highest restaurant density.
-* Understood spatial patterns and their relationship with customer ratings.
+Task 2: Customer Preference Analysis
+* Analyze relationships between cuisine types and restaurant ratings.
+* Identify the most popular cuisines based on votes.
+* Determine which cuisines consistently receive high ratings.
+* Visualize insights using bar charts and scatterplots.
 
-Tools & Libraries Used
+Task 3: Data Visualization
+* Visualize the distribution of ratings using histograms and bar plots.
+* Compare average ratings across cuisines and cities.
+* Explore relationships between features such as Votes, Price range, and Aggregate rating.
+* Use scatterplots, boxplots, and correlation heatmaps to gain insights.
 
-* Python
-* Pandas – data handling
-* NumPy – numerical operations
-* Matplotlib / Seaborn – visualizations
-* Folium – geospatial mapping
-  
+📊 Tools & Libraries
+* Pandas – data manipulation
+* NumPy – numerical computations
+* Matplotlib & Seaborn – data visualization
+* Scikit-learn – predictive modeling and evaluation
+
+🎯 Key Insights
+* Certain cuisines consistently receive higher ratings and are popular among customers.
+* Votes and Price range can influence customer perception and rating.
+* Predictive models can help estimate restaurant ratings based on key features.
+* Visualization aids in identifying trends and relationships across cities and cuisines.
